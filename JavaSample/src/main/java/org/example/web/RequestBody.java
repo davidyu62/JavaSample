@@ -9,9 +9,7 @@ public class RequestBody {
 		this.QueueSize = queueSize;
 		this.Message = message;
 	}
-	
-	
-	
+
 	public String getQueueSize() {
 		return QueueSize;
 	}

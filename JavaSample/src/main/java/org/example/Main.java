@@ -2,8 +2,10 @@ package org.example;
 
 import org.example.datastructure.queue.QueueHandler;
 import org.example.gson.GsonHandler;
+import org.example.jetty.JettyHandler;
 import org.example.math.RandomHandler;
 import org.example.thread.ThreadHandler;
+import org.example.util.FileUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +18,11 @@ public class Main {
     }
 
     public void start(){
+//        JettyHandler jettyHandler = new JettyHandler();
+//        jettyHandler.startServer();
+        FileUtil fileUtil = new FileUtil();
+        fileUtil.readJsonFile();
+
     }
 
     public void mathRandom(){
@@ -40,6 +47,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        new Main().thread();
+        new Main().start();
     }
 }

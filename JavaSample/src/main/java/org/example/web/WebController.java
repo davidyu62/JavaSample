@@ -2,6 +2,7 @@ package org.example.web;
 
 import com.google.gson.Gson;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -48,5 +49,12 @@ public class WebController extends HttpServlet {
 
         /* response code */
         resp.setStatus(200);        // defualt 200, it sames with no this line.
+    }
+
+    protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
+        res.setStatus(200);
+        res.setHeader("Content-Type", "application/json");
+        // HttpHeader에 setHeader에 필요한 name 값 포함하고 있음
+        res.getWriter().write("Hello! service");
     }
 }

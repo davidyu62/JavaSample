@@ -10,6 +10,7 @@ public class JettyHandler {
 
     private Server server;
     private ServerConnector httpConnector;
+    private ServerConnector httpConnector2;
     private ServletHandler servletHandler;
 
     public void startServer() {
@@ -20,8 +21,14 @@ public class JettyHandler {
         httpConnector.setHost("127.0.0.1");
         httpConnector.setPort(8080);
 
+        // add if want to listen another port.
+        httpConnector2 = new ServerConnector(server);
+        httpConnector2.setHost("127.0.0.1");
+        httpConnector2.setPort(8081);
+
         // add connector to server
         server.addConnector(httpConnector);
+        server.addConnector(httpConnector2);
 
         // 2. Servlet Handler 매핑
         servletHandler = new ServletHandler();
