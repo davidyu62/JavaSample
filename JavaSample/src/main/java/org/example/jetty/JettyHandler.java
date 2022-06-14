@@ -3,6 +3,7 @@ package org.example.jetty;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletHandler;
+//import org.eclipse.jetty.client.HttpClient;
 
 import java.io.IOException;
 
@@ -42,5 +43,13 @@ public class JettyHandler {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void startClient(){
+//        HttpClient httpClient = new HttpClient();
+//        httpClient.start();
+//        ContentResponse contentRes = httpClient.newRequest ("http://127.0.0.1:8080/helloworld ").method(HttpMethod.GET).send();
+//        System.out.println(contentRes.getContentAsString());
+    }
     }
 }

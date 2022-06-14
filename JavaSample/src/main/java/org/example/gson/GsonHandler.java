@@ -1,8 +1,6 @@
 package org.example.gson;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -55,6 +53,10 @@ public class GsonHandler {
         map.put("age","33");
         String jsonStr = gson.toJson(map);
         System.out.println("Map jsonStr:"+jsonStr);
+    }
+
+    public void serialization(){
+        JsonElement jsonElement = JsonParser.parseString("{\"key\":\"value\"}");
     }
 }
 
