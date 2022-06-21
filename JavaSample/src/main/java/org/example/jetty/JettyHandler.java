@@ -51,5 +51,4 @@ public class JettyHandler {
 //        ContentResponse contentRes = httpClient.newRequest ("http://127.0.0.1:8080/helloworld ").method(HttpMethod.GET).send();
 //        System.out.println(contentRes.getContentAsString());
     }
-    }
 }

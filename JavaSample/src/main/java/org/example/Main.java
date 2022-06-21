@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.classloader.ClassLoaderHandler;
 import org.example.datastructure.queue.QueueHandler;
 import org.example.gson.GsonHandler;
 import org.example.jetty.JettyHandler;
@@ -20,9 +21,9 @@ public class Main {
     public void start(){
 //        JettyHandler jettyHandler = new JettyHandler();
 //        jettyHandler.startServer();
-        FileUtil fileUtil = new FileUtil();
-        fileUtil.readJsonFile();
-
+//        FileUtil fileUtil = new FileUtil();
+//        fileUtil.readJsonFile();
+        new ClassLoaderHandler().start();
     }
 
     public void mathRandom(){
