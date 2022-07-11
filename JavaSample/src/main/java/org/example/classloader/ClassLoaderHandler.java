@@ -21,17 +21,17 @@ public class ClassLoaderHandler {
         try {
             myurl[0] = new URL("file:///C:\\workspace\\JavaSample\\JavaSample\\classes\\");
             URLClassLoader x = new URLClassLoader(myurl);
-            Class c = x.loadClass("TestMain");
+            Class c = x.loadClass("TestMain");          // TestMain is name of class
 
             Object ob = c.newInstance();
             Class arg2[] = {};
-            Method m2 = c.getMethod("printValue", String.class);
-            m2.invoke(ob, "Hi");
+            Method m2 = c.getMethod("printValue", String.class);        // method name
+            m2.invoke(ob, "Hi");                                        // parameter
 
             Object ob2 = c.newInstance();
             Class arg3[] = {};
             Method m3 = c.getMethod("getList");
-            List<Integer> list = (List<Integer>) m3.invoke(ob2);
+            List<Integer> list = (List<Integer>) m3.invoke(ob2);                // return value
             System.out.println(list.toString());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
@@ -49,6 +49,26 @@ public class ClassLoaderHandler {
 
     }
 
+}
+
+class TestMain {
+
+    List<Integer> list;
+
+    public void printValue(String value) {
+        System.out.println(value);
+    }
+
+    public List<Integer> getList(){
+        list = new ArrayList<>();
+        list.add(1);list.add(2);list.add(3);
+        return list;
+    }
+
+    public String[] getStr() {
+        String[] str = {"davidyu","erickyu"};
+        return str;
+    }
 }
 
 /*

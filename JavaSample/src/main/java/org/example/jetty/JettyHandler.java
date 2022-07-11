@@ -48,7 +48,8 @@ public class JettyHandler {
     public void startClient(){
 //        HttpClient httpClient = new HttpClient();
 //        httpClient.start();
-//        ContentResponse contentRes = httpClient.newRequest ("http://127.0.0.1:8080/helloworld ").method(HttpMethod.GET).send();
+//        ContentResponse contentRes = httpClient.newRequest ("http://127.0.0.1:8080/helloworld").method(HttpMethod.GET).send();
 //        System.out.println(contentRes.getContentAsString());
+//        https://blog.naver.com/PostView.naver?blogId=ambidext&logNo=222434508009&categoryNo=0&parentCategoryNo=10&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search
     }
 }

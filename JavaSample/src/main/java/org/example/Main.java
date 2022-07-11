@@ -3,7 +3,9 @@ package org.example;
 import org.example.classloader.ClassLoaderHandler;
 import org.example.datastructure.queue.QueueHandler;
 import org.example.gson.GsonHandler;
+import org.example.gson.GsonMap;
 import org.example.jetty.JettyHandler;
+import org.example.list.ListHandler;
 import org.example.math.RandomHandler;
 import org.example.thread.ThreadHandler;
 import org.example.util.FileUtil;
@@ -23,7 +25,9 @@ public class Main {
 //        jettyHandler.startServer();
 //        FileUtil fileUtil = new FileUtil();
 //        fileUtil.readJsonFile();
-        new ClassLoaderHandler().start();
+//        new ClassLoaderHandler().start();
+//        new GsonMap().start();
+        new ListHandler().start();
     }
 
     public void mathRandom(){

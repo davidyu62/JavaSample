@@ -56,7 +56,7 @@ public class GsonHandler {
     }
 
     public void serialization(){
-        JsonElement jsonElement = JsonParser.parseString("{\"key\":\"value\"}");
+//        JsonElement jsonElement = JsonParser.parseString("{\"key\":\"value\"}");
     }
 }
 
