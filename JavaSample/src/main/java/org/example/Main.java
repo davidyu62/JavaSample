@@ -27,8 +27,8 @@ public class Main {
 //        fileUtil.readJsonFile();
 //        new ClassLoaderHandler().start();
 //        new GsonMap().start();
-//        new ListHandler().start();
-        thread();
+        new ListHandler().start();
+//        thread();
     }
 
     public void mathRandom(){
