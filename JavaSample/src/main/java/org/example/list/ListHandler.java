@@ -53,6 +53,8 @@ public class ListHandler {
             if(list.get(i).containsAll(compList.get(i))){
                 resultList.add(list.get(i));
                 System.out.println(list.get(i));
+
+                // removeAll은 제거
             }
         }
 
