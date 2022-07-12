@@ -27,7 +27,8 @@ public class Main {
 //        fileUtil.readJsonFile();
 //        new ClassLoaderHandler().start();
 //        new GsonMap().start();
-        new ListHandler().start();
+//        new ListHandler().start();
+        thread();
     }
 
     public void mathRandom(){
@@ -47,8 +48,8 @@ public class Main {
 
     public void thread(){
         ThreadHandler threadHandler = new ThreadHandler();
-//        threadHandler.start();
-        threadHandler.executorServiceStart();
+        threadHandler.start();
+//        threadHandler.executorServiceStart();
     }
 
     public static void main(String[] args) {
